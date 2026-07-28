@@ -1,0 +1,68 @@
+
+.iti--input-container {
+  width: 100%;
+  margin: var(--input-box-padding);
+}
+
+.iti__country-container {
+  width: 85px;
+}
+
+.iti__selected-country {
+  width: 100%;
+  flex-direction: row-reverse;
+  font-family: "Arial", sans-serif;
+}
+
+.iti__selected-country-primary {
+  width: 100%;
+  --iti-hover-color: transparent;
+}
+
+.iti__selected-dial-code {
+  margin-left: 0;
+  font-size: .96rem;
+}
+
+.iti__arrow {
+  margin-left: auto;
+  margin-bottom: 2px;
+  --iti-icon-color: #000;
+  --iti-arrow-size: 6px;
+  --iti-arrow-width: 2px;
+}
+
+.iti__tel-input {
+  padding-bottom: 0;
+  padding-left: 89px!important;
+  background-color: transparent;
+}
+
+.iti__tel-input:not(:focus)::placeholder {
+  opacity: 0;
+}
+
+.iti__tel-input:not(:focus):-webkit-input-placeholder,
+.iti__tel-input:not(:focus):-ms-input-placeholder,
+.iti__tel-input:not(:focus):-moz-placeholder {
+  opacity: 0;
+}
+
+.iti__country-selector {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  left: -1rem !important;
+}
+.iti__country-selector, .iti__country-list {
+  width: 16rem !important;
+}
+
+.iti__country-list .iti__flag, .iti__country-check, .iti__dial-code {
+  display: none;
+  width: 0;
+}
+
+.iti__country {
+  padding-top: .71rem;
+  padding-bottom: .71rem;
+}

@@ -5,7 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>spaedengarden | Kinindo, Bujumbura 26&deg;C</title>
 	<link rel="stylesheet" href="app.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Ovo&display=swap" rel="stylesheet">
 </head>
 <body class="body">
 	<nav class="nav-wrapper">
@@ -17,8 +19,8 @@
 					<ul class="inner-menu">
 						<li>&Agrave;&nbsp;Propos</li>
 						<li>L'Art du Bien-&ecirc;tre</li>
-						<li>Galerie</li>
 						<li>Nous&nbsp;contacter</li>
+						<li>Galerie</li>
 					</ul>
 					<div class="action-btn inline-block">R&eacute;server</div>
 				</div>
@@ -47,6 +49,18 @@
           			<li>Informations&nbsp;L&eacute;gales</li>
 			</ul>
 			<div class="about-cookies">
+				<div class="last-credits">
+					<address>
+					<strong>spaedengarden</strong><br>
+					74 Kinindo, Bujumbura<br>
+					<a href="mailto:contact@spaedengarden.bi">contact@spaedengarde.bi</a><br>
+					T +257 61979900<br>
+					Instagram<br>
+					Whatsapp<br>
+					&copy; 2026 Les Ardennes<br>
+					<sup>~&#x2022;~</sup>
+					</address>
+				</div>
 				<button>Cookies</button>
 			</div>
 		</div>
@@ -92,7 +106,7 @@
 					soins sur mesure et une &eacute;quipe aux petit soins.</span><br>
 				<span>Pr&ecirc;t pour l'&eacute;vasion!</span>
 				</p>
-				<div class="hero-action">
+				<div class="mini-hero-action">
 					<div class="calendar"></div>
 					<button>R&eacute;server</button>
 				</div>
@@ -110,47 +124,10 @@
 			<h2>Histoires&nbsp;&amp;&nbsp;Photos</h2>
 		</section>
 	</main>
-	<footer id="contact">
-		<div class="framer">
-			<nav class="lang-nav framer-obj" aria-label="Langue/Language">
-				<details class="slct-comp">
-					<summary class="slct-label">Language <span class="expand-arrow"></span></summary>
-					<div class="slct-overlay-wrapper expand-top">
-						<ul class="slct-content">
-							<li>Kirundi</li>
-							<li>Swahili</li>
-							<li class="selected">Fran&ccedil;ais</li>
-							<li>English</li>
-						</ul>
-					</div>
-				</details>
-			</nav>
-    			<p class="copyright framer-obj">
-			&copy; 2026 Les Ardennes
-			<br><sup>~</sup> 
-    			</p>
-		</div>
-    		<div class="last-credits">
-      			<address class="parallax-item">
-				@spaedengarden<br>
-				<strong>Les Ardennes</strong><br>
-				74 Kinindo, Bujumbura<br>
-				<a href="mailto:contact@spaedengarden.bi">contact@spaedengarde.bi</a><br>
-				<ul>
-					<li>Tel. +257 61 97 99 00</li>
-					<li>Instagram</li>
-					<li>Whatsapp</li>
-				</ul>
-      			</address>
-    		</div>
-      		<div class="hero-action">
-        		<button>R&eacute;server</button>
-      		</div>
-	</footer>
-	<div id="fixed-frame"></div>
+	
 	<!-- UI Scripts -->
 	<script>
-		
+
 		/* --BEGIN-- nav */
 		
 		document.addEventListener('DOMContentLoaded', () => {
@@ -166,17 +143,6 @@
 				sensAreas[i].addEventListener('mouseenter', () => toggleShowNav(true), { passive: true });
 				sensAreas[i].addEventListener('mouseleave', () => toggleShowNav(false), { passive: true });
 			}
-			
-			/* hide navigation controls when at footer */
-			const footerObserver = new IntersectionObserver((entries) => {
-				const footerEntry = entries[0]; // we only track one element, the footer
-				document.body.dataset.showNav = !footerEntry.isIntersecting ? `true` : `false`; // disable/enable navs
-			}, {
-				// Observer options
-				threshold: 0,
-				root: null,
-			});
-			footerObserver.observe(document.getElementById(`contact`));
 			
 			/* show/hide navigation controls when user scroll-up/scroll-down */
 			let lastScroll = 0;
@@ -231,37 +197,13 @@
 
 		document.addEventListener('DOMContentLoaded', () => {
 
+			/*Sizing the body section*/
 			const ro = new ResizeObserver(entries => {
 				const body = entries[0];
-				const adjustedWidth = body.contentRect.width + 3;
+				const adjustedWidth = body.contentRect.width;
 				document.documentElement.style.setProperty(`--body-width-adjusted`, `${adjustedWidth}px`);
 			});
 			ro.observe(document.body);
-
-			
-
-			const dropdowns = document.querySelectorAll(`slct-comp`);
-			dropdowns.forEach((dropdown) => {
-				dropdown.addEventListener('mouseenter', (e) => {
-					dropdown.setAttribute('open', '');
-				});
-
-				dropdown.addEventListener('mouseleave', () => {
-					dropdown.removeAttribute('open');
-				});
-
-				dropdown.addEventListener('touchstart', (e) => {
-					if (window.matchMedia("(pointer: coarse)").matches) {
-						e.preventDefault();
-
-						if (dropdown.hasAttribute('open')) {
-							dropdown.removeAttribute('open');
-						} else {
-							dropdown.setAttribute('open', '');
-						}
-					}
-				});
-			});
 		});
 
 		/* --END-- miscellaneous */

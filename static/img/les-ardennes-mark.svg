@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Les Ardennes mark</title>
+  <desc id="desc">Standalone monochrome arched Ardennes forest and rolling hills mark.</desc>
+  <g>
+      <defs>
+    <clipPath id="mark-arch-clip">
+      <path d="M96 430V184C96 96.1 168.1 24 256 24s160 72.1 160 160v246Z"/>
+    </clipPath>
+    <g id="mark-pine">
+      <path fill="#4f4f4b" d="M0-45 5-29H1l9 15H3l13 18H5l17 20H-22L-5 4h-11L-3-14h-7l9-15h-4Z"/>
+      <rect fill="#4f4f4b" x="-3.5" y="22" width="7" height="14" rx="1"/>
+    </g>
+  </defs>
+    <path fill="none" stroke="#4f4f4b" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" d="M96 430V184C96 96.1 168.1 24 256 24s160 72.1 160 160v246"/>
+    <g clip-path="url(#mark-arch-clip)">
+      <path fill="none" stroke="#4f4f4b" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" d="M116 302c57-20 98-44 154-44 52 0 98 18 126 43"/>
+      <g>
+        <use href="#mark-pine" xlink:href="#mark-pine" transform="translate(211 270) scale(.68)"/>
+        <use href="#mark-pine" xlink:href="#mark-pine" transform="translate(252 258) scale(.56)"/>
+        <use href="#mark-pine" xlink:href="#mark-pine" transform="translate(296 254) scale(.8)"/>
+        <use href="#mark-pine" xlink:href="#mark-pine" transform="translate(344 273) scale(.62)"/>
+      </g>
+      <path fill="none" stroke="#4f4f4b" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" d="M104 355c61-24 113-13 160 18 43 29 91 35 144 11"/>
+      <path fill="none" stroke="#4f4f4b" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" d="M106 394c74-27 145-15 211 15 27 12 51 15 75 5"/>
+    </g>
+  </g>
+</svg>
