@@ -36,7 +36,7 @@ body {
 
 main {
 	position: relative;
-	min-height: 100vh;
+	min-height: 100lvh;
 	margin: 0 var(--user-margin, 9px);
 }
 
@@ -682,7 +682,7 @@ body[data-show-nav="false"] #mobile-menu {
 
 /*--BEGIN-- last-hero-action section --*/
 #last-hero-section {
-	min-height: calc( 100vh + var(--scroll-depth, 300vh));
+	min-height: calc( 100lvh + var(--scroll-depth, 300lvh));
 	
 	/*
 	 * view-timeline-name: --hero-action-timeline;
@@ -764,47 +764,9 @@ body[data-show-nav="false"] #mobile-menu {
 	}
 }
 
-/*
-#fixed-frame {
-	display: block;
-	height: calc(100vh - 34px);
-	width: var(--body-width-adjusted);
-	pointer-events: none;
-	position: fixed;
-	top: 17px;
-	left: calc(var(--user-margin, 8px) - 1.5px);
-	z-index: 98;
-	transform-origin: bottom center;
-	box-shadow: rgba(0, 0, 0, 0.06) 0px 6px 24px 0px, rgba(0, 0, 0, 0.09) 0px 0px 0px 1px;
-
-	animation: fixed-frame-reveal linear both;
-	animation-timeline: --hero-action-timeline;
-	animation-range: contain 0% contain 49px;
-}
-*/
-/*
-#fixed-frame::before {
-	content: "";
-	position: absolute;
-	bottom: -15px;
-	left: 10%;
-	width: 80%;
-	height: 10px;
-	background: rgba(0, 0, 0, 0.26);
-	filter: blur(10px);
-	border-radius: 50%;
-	z-index: -2;
-	pointer-events: none;
-
-	animation: shadow-swing linear both;
-	animation-timeline: --hero-action-timeline;
-	animation-range: contain 0% contain 100%;
-}
-*/
-
 .framer {
 	margin: 18px 0;
-	min-height: calc(100vh - 36px);
+	min-height: calc(100lvh - 36px);
 	background-color: white;
 	transform-style: preserve-3d;
 	transform-origin: bottom center;
@@ -877,7 +839,6 @@ body[data-show-nav="false"] #mobile-menu {
 	display: flex;
 	flex-direction: column;
        	padding: 0 48px;
-	border-left: 1px solid #eeeeee33;
 	margin: 1.5rem 0;
 }
 
@@ -919,10 +880,6 @@ body[data-show-nav="false"] #mobile-menu {
 
 	.mobile-reverse-cols {
 		flex-direction: column-reverse !important;
-	}
-	
-	.header {
-		max-width: 650px;
 	}
 	
 	.framer::after {
@@ -999,14 +956,6 @@ body[data-show-nav="false"] #mobile-menu {
 		background-color: white;
 		pointer-events: auto;
 	}
-
-	.btn {
-		display: block;
-		width: 100%;
-		margin: auto;
-	}
-
-	
 }
 
 @media (max-width: 768px) {
@@ -1017,6 +966,9 @@ body[data-show-nav="false"] #mobile-menu {
 
 	.framer {
 		grid-template-columns: 1fr;
+		max-width: 650px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	.slick-slider {
@@ -1043,6 +995,9 @@ body[data-show-nav="false"] #mobile-menu {
 		grid-column:1 /-1;
 	}
 
+	.btn {
+		width: 100%;
+	}
 }
 
 @media (max-width: 480px) {
