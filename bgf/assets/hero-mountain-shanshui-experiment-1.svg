@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" preserveAspectRatio="none" role="img" aria-labelledby="title desc">
+  <title id="title">Abstract Shanshui mountain landscape</title>
+  <desc id="desc">Layered misty mountain ridges in warm orange, cream, charcoal, and blue-gray.</desc>
+  <defs>
+    <linearGradient id="far-ink" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fffaf0" stop-opacity=".7"/>
+      <stop offset="1" stop-color="#ffe8c8" stop-opacity=".42"/>
+    </linearGradient>
+    <linearGradient id="mid-ink" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#fffaf0" stop-opacity=".72"/>
+    </linearGradient>
+    <linearGradient id="front-ink" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="1" stop-color="#fffdf8" stop-opacity=".92"/>
+    </linearGradient>
+    <linearGradient id="mist" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fffaf0" stop-opacity="0"/>
+      <stop offset=".28" stop-color="#fffaf0" stop-opacity=".72"/>
+      <stop offset=".66" stop-color="#fffaf0" stop-opacity=".48"/>
+      <stop offset="1" stop-color="#fffaf0" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fffaf0" stop-opacity="0"/>
+      <stop offset=".8" stop-color="#fffaf0" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#fffaf0" stop-opacity=".96"/>
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(0 170) scale(1 .7)">
+  <path fill="url(#far-ink)" d="M0 420 92 390 176 412 292 344 406 406 520 376 650 414 760 350 880 408 1000 372 1120 414 1240 354 1360 410 1480 382 1600 420v290H0Z"/>
+  <path fill="url(#mid-ink)" d="M0 515 108 478 214 500 306 408 414 492 520 458 650 506 760 420 880 490 1000 444 1120 500 1240 416 1360 486 1480 450 1600 490v210H0Z"/>
+  <path fill="url(#front-ink)" d="M0 616 106 580 224 604 318 498 426 594 540 548 650 610 760 494 880 594 1000 526 1120 608 1240 500 1360 584 1480 548 1600 584v116H0Z"/>
+
+  <path fill="#ffffff" fill-opacity=".56" d="M0 467c131-36 205 6 309-18 107-25 176-29 267 1 93 30 144 19 237-11 105-34 207-8 285 13 92 25 152 13 239-12 95-28 168-6 263 24v54c-117-31-194-42-284-17-96 26-151 42-246 15-87-25-164-35-254-5-96 32-152 48-249 12-92-34-154-21-260 4-105 25-188-15-307 20Z"/>
+  <path fill="url(#mist)" d="M-40 544c161-40 239 18 385-15 142-32 218-22 335 9 126 34 202 23 322-12 124-36 220-9 328 14 111 24 192 17 310-17v73c-120 32-210 42-322 18-111-24-192-44-307-10-123 36-210 49-333 15-119-33-203-38-337-8-149 34-246-27-381 14Z"/>
+
+  <g fill="none" stroke="#fffaf0" stroke-linecap="round" opacity=".34">
+    <path stroke-width="5" d="M120 595c176-26 280-1 402-18 110-15 194-18 300 3 132 26 249 21 384-7 105-22 197-18 291 3"/>
+    <path stroke-width="3" d="M58 631c172-19 278 4 401-10 135-15 225-12 348 9 121 20 239 15 360-8 135-26 251-18 390 8"/>
+  </g>
+  </g>
+
+  <rect width="1600" height="700" fill="url(#fade)"/>
+</svg>
